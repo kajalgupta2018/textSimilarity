@@ -17,9 +17,16 @@ from gensim.models.callbacks import CallbackAny2Vec
 import numpy as np
 from nltk.corpus import stopwords
  
-nltk.download('punkt')
-nltk.download('stopwords')
+#nltk.download('punkt')
+#nltk.download('wordnet')
+#nltk.download('stopwords')
 
+import os
+root = os.path.dirname(os.path.abspath(__file__))
+nltk_dir = os.path.join(root, '../my_nltk_dir')  # Your folder name here
+os.environ['NLTK_DATA'] = nltk_dir
+
+print(nltk_dir)
 import numpy 
 
 class TextTokenizer:

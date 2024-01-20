@@ -3,6 +3,11 @@ from flask import Flask, request
 from model.model import TextTokenizer,ModelArgs,SimilarityModel
 from model.model import pipeline
 import os
+
+root = os.path.dirname(os.path.abspath(__file__))
+nltk_dir = os.path.join(root, '../my_nltk_dir')  # Your folder name here
+os.environ['NLTK_DATA'] = nltk_dir
+print("nltk dir:", nltk_dir)
 tokenizer = TextTokenizer()
 current_path = os.path.dirname(__file__)
 print("current path:", current_path) 

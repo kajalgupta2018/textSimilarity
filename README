@@ -1,0 +1,10 @@
+- There are 3 main python files :
+    1. app.py : Main app using flask and run on web. 
+    2. resources/main_sim.py : It contains GET method which receives text1 and text2 and invoke model to calcualte Similarity Index.
+
+    3. model/model.py : It contains Two main classes SimilarityModel and TextTokenizer
+        SimilarityModel : It uses word2vec model and train on data file and produces vector for each word. using word vector to calculate cosign similarity.
+        TextTokenizer: It clean the data and split text into word tokens. 
+
+- There is one data folder which contains csv and model file.
+
